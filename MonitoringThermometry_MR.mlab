@@ -1,0 +1,1419 @@
+// MDL v1 utf8
+mevislabVersion = 3.2
+network  {
+  watchlist = ""
+}
+module Scale {
+  internal  {
+    frame = "546 792 184 80"
+    moduleGroupName = Thermometry
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "217 414 235 337"
+        sizeHint = "235 337"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ScaleImage
+    inputMin = 0
+    inputMax = 4095
+    updateMode = AutoUpdateMinMaxOff
+    useTrueRange = TRUE
+    typeSelect = Double
+    outputMin = -3.14159265359
+    outputMax = 3.14159265359
+  }
+}
+module Scale {
+  internal  {
+    frame = "343 792 184 80"
+    moduleGroupName = Thermometry
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "540 227 209 312"
+        sizeHint = "209 312"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ScaleReference
+    inputMin = 0
+    inputMax = 4095
+    updateMode = AutoUpdateMinMaxOff
+    useTrueRange = TRUE
+    typeSelect = Double
+    outputMin = -3.14159265359
+    outputMax = 3.14159265359
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "469 530 136 64"
+    moduleGroupName = Thermometry
+    windows  {
+      window _default {
+        geometry = "485 192 486 508"
+        sizeHint = "486 508"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComputeHeatMap
+    calculateOutputSubImage = "out = in0 / (6.28318530718 * 42.58e6 * 0.01e-6 * 1.5 * 5.08e-3)
+#6.28318530718"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = ""
+    numberOfInputs = 1
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 5
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = factor
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = FALSE
+    minVoxelValue = 0
+    maxVoxelValue = 0
+    setDataType = TRUE
+    dataType = double
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "469 641 136 80"
+    moduleGroupName = Thermometry
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "280 419 353 94"
+        sizeHint = "353 94"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComputeDifference
+    function = Subtract
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module IntervalThreshold {
+  internal  {
+    frame = "497 297 128 64"
+    moduleGroupName = Thermometry
+    windows  {
+      window _default {
+        geometry = "315 120 331 344"
+        sizeHint = "331 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ClampValues
+    lowerType = UserDef
+    innerType = ImgOrig
+    upperType = UserDef
+    centerWidthSet = TRUE
+    threshCenter = 50
+    threshWidth = 100
+    threshMin = 0
+    threshMax = 100
+    lowerUserValue = 0
+    innerUserValue = 1
+    upperUserValue = 100
+    changeMinMax = TRUE
+    changedMin = 0
+    changedMax = 100
+  }
+}
+module Arithmetic1 {
+  internal  {
+    frame = "469 417 152 80"
+    moduleGroupName = Thermometry
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "418 347 362 74"
+        sizeHint = "359 74"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AddBaseTemperature
+    function = Add
+    constant = 17
+  }
+}
+module Bypass {
+  internal  {
+    frame = "385 985 144 64"
+    moduleGroupName = Input
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = inPhaseImage
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "561 989 112 56"
+    moduleGroupName = Input
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = inReferenceImage
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "466 125 136 64"
+    moduleGroupName = Output
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = outHeatMap
+    noBypass = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "293 1109 136 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "361 133 385 321"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/Phase sortiert/112_5/IM00168.dcm"
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "533 1421 136 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "265 125 385 321"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad1
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/IM00008.dcm"
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "741 989 120 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "1440 95 400 424"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1024
+    lutWidth = 2048
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "250 985 120 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "516 109 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D1
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1024
+    lutWidth = 2048
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "477 -155 120 56"
+    moduleGroupName = Output
+    windows  {
+      window _default {
+        geometry = "117 177 479 487"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D2
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 100
+    lutWidth = 100
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module DicomTagBrowser {
+  internal  {
+    frame = "99 985 136 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "175 75 610 434"
+        sizeHint = "610 434"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = DicomTagBrowser
+    sortByColumn = 0
+    sortAscending = TRUE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "609 1317 96 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Arithmetic2
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "685 1421 136 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "288 132 385 321"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad2
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/IM00016.dcm"
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "741 1317 136 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "288 132 385 321"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad3
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/IM00024.dcm"
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "613 1213 104 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Arithmetic21
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "669 1101 104 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "337 248 286 88"
+        sizeHint = "286 88"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic22
+    function = Divide
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "757 1205 88 72"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "377 162 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold
+    threshold = 0
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 3
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module RunPythonScript {
+  internal  {
+    frame = "118 1194 160 56"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "617 440 621 300"
+        sizeHint = "621 300"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = RunPythonScript
+    in0 = ""
+    in1 = ""
+    in2 = ""
+    in3 = ""
+    in4 = ""
+    in5 = ""
+    in6 = ""
+    in7 = ""
+    in8 = ""
+    in9 = ""
+    inComment0 = in0
+    inComment1 = in1
+    inComment2 = in2
+    inComment3 = in3
+    inComment4 = in4
+    inComment5 = in5
+    inComment6 = in6
+    inComment7 = in7
+    inComment8 = in8
+    inComment9 = in9
+    autoApply0 = TRUE
+    autoApply1 = TRUE
+    autoApply2 = TRUE
+    autoApply3 = TRUE
+    autoApply4 = TRUE
+    autoApply5 = TRUE
+    autoApply6 = TRUE
+    autoApply7 = TRUE
+    autoApply8 = TRUE
+    autoApply9 = TRUE
+    out0 = ""
+    out1 = ""
+    out2 = ""
+    out3 = ""
+    out4 = ""
+    out5 = ""
+    out6 = ""
+    out7 = ""
+    out8 = ""
+    out9 = ""
+    outComment0 = out0
+    outComment1 = out1
+    outComment2 = out2
+    outComment3 = out3
+    outComment4 = out4
+    outComment5 = out5
+    outComment6 = out6
+    outComment7 = out7
+    outComment8 = out8
+    outComment9 = out9
+    initCode = "# For backward compatibility, set up CTX as alias for ctx
+CTX = ctx # ctx is the network's context, not RunPythonScript's"
+    wakeUpCode = ""
+    code = "*ref = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/"
+root = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/Phase sortiert/"
+dest = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/HeatMap/"
+angle = [ "135","157_5","0","22_5","45","67_5","90","112_5" ]
+
+#Leber 8
+x = [100,100,100,99,100,100,101,99]
+xs = [151,151,152,151,152,153,150,151]
+
+y = [115,116,117,116,102,100,109,102]
+ys = [151,147,146,147,140,144,145,139]
+
+#Leber 10
+x = [89,89,90,90,100,100,93,91]
+xs = [151,148,148,149,150,152,151,153]
+
+y = [109,111,111,112,101,103,96,101]
+ys = [152,144,146,146,144,151,154,147]
+
+
+
+
+for o in range(8):
+  dcm = ""
+  b = (o+1) + 0 * 8
+  if b >= 10:
+    dcm = "IM000" + str(b) + ".dcm"
+  else:
+      dcm = "IM0000" + str(b) + ".dcm"
+  ctx.field("ImageLoad1.filename").value = ref + dcm
+  ctx.field("ImageLoad1.load").touch()
+  
+  b = (o+1) + 1 * 8
+  if b >= 10:
+    dcm = "IM000" + str(b) + ".dcm"
+  else:
+      dcm = "IM0000" + str(b) + ".dcm"
+  ctx.field("ImageLoad2.filename").value = ref + dcm
+  ctx.field("ImageLoad2.load").touch()
+  
+  b = (o+1) + 2 * 8
+  if b >= 10:
+    dcm = "IM000" + str(b) + ".dcm"
+  else:
+      dcm = "IM0000" + str(b) + ".dcm"
+  ctx.field("ImageLoad3.filename").value = ref + dcm
+  ctx.field("ImageLoad3.load").touch()
+  
+  ctx.field("SubImage.y").value = x[o]+1
+  ctx.field("SubImage.sy").value = xs[o]+1
+  
+  ctx.field("SubImage.x").value = y[o]+1
+  ctx.field("SubImage.sx").value = ys[o]+1
+  
+
+  
+  for tsp in range(21):
+    b = (o+1) + 8 * tsp
+    if b >= 10:
+      dcm = "IM000" + str(b) + ".dcm"
+    if b >= 100:
+      dcm = "IM00" + str(b) + ".dcm"
+    if b < 10:
+        dcm = "IM0000" + str(b) + ".dcm"    
+    file = angle[o] #str(o+1)
+    ctx.field("ImageLoad.filename").value = root + file +"/" + dcm
+    ctx.field("ImageLoad.load").touch()
+    
+    
+
+    
+    ctx.field("ImageSave.filename").value = dest + angle[o] +"/" + str(tsp+1) + ".dcm"
+    ctx.field("ImageSave.save").touch()
+    
+  ctx.field("ImageSave1.filename").value = dest + angle[o] +"/" + str(0) + ".dcm"
+  ctx.field("ImageSave1.save").touch()*"
+    finalizeCode = ""
+    showFields = FALSE
+    showInitCode = FALSE
+    showWakeUpCode = FALSE
+    showCode = TRUE
+    showFinalizeCode = FALSE
+    showConsole = FALSE
+  }
+}
+module DicomTimeTool {
+  internal  {
+    frame = "362 1436 120 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "274 136 413 313"
+        sizeHint = "413 313"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = DicomTimeTool
+    dicomDate1 = ""
+    dicomTime1 = ""
+    dicomDate2 = ""
+    dicomTime2 = ""
+  }
+}
+module ImageSave {
+  internal  {
+    frame = "601 -131 96 72"
+    moduleGroupName = Output
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "274 146 324 425"
+        sizeHint = "324 425"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageSave
+    taskVerboseLogging = FALSE
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/HeatMap/112_5/21.dcm"
+    format = DICOM
+    comment = MeVisLab
+    allowOverwrite = TRUE
+    autoFilename = FALSE
+    sourceName = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/IM00008.dcm"
+    postfix = .result1
+    dicomNameUsed = TRUE
+    dicomMetaHeader = TRUE
+    dicomDerived = TRUE
+    dicomDerivedImageType = "OTHER\\MEVISLAB"
+    dicomDiscardTags = FrameSpecific
+    dicomStoreTimeInfo = None
+    dicomSetWindow = FALSE
+    dicomWindowCenter = 0
+    dicomWindowWidth = 0
+    dicomIgnoreHalfVoxelShift = FALSE
+    tiffCompression = LZW
+    tiffTileX = 128
+    tiffTileY = 128
+    tiffTileXAuto = TRUE
+    tiffTileYAuto = TRUE
+    tiffLinearRGB = FALSE
+    saveDicomHeaderOnly = FALSE
+    pngCompression = Default
+    pngInterlaced = FALSE
+    jpegQuality = 75
+    jpegProgressive = FALSE
+  }
+}
+module Round {
+  internal  {
+    frame = "501 45 72 56"
+    moduleGroupName = Output
+    windows  {
+      window _default {
+        geometry = "812 590 297 80"
+        sizeHint = "297 80"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Round
+    roundMode = Round
+    updateMode = AutoUpdate
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "757 477 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "65 258 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad4
+    filename = $(NETWORK)/2022-03-26_Leber_10min/Ablation/HeatMap/112_5/10.dcm
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "493 -35 88 56"
+    moduleGroupName = Output
+    windows  {
+      window _default {
+        geometry = "684 367 396 525"
+        sizeHint = "396 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 102
+    sx = 148
+    modifyX = TRUE
+    y = 92
+    sy = 154
+    modifyY = TRUE
+    z = 0
+    sz = 0
+    modifyZ = FALSE
+    c = 0
+    sc = 0
+    modifyC = FALSE
+    t = 0
+    st = 0
+    modifyT = FALSE
+    u = 0
+    su = 0
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartEnd
+    autoApply = TRUE
+  }
+}
+module Info {
+  internal  {
+    frame = "366 -142 104 80"
+    moduleGroupName = Output
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "213 103 442 342"
+        sizeHint = "442 342"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Info
+  }
+}
+module Info {
+  internal  {
+    frame = "489 1113 112 80"
+    moduleGroupName = Input
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "116 85 442 342"
+        sizeHint = "442 342"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Info1
+  }
+}
+module Info {
+  internal  {
+    frame = "853 385 104 80"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Info2
+  }
+}
+module View2D {
+  internal  {
+    frame = "749 357 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "490 314 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D3
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module ImageSave {
+  internal  {
+    frame = "845 -203 104 72"
+    moduleGroupName = Output
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "760 392 401 476"
+        sizeHint = "401 476"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageSave1
+    taskVerboseLogging = FALSE
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/HeatMap/112_5/0.dcm"
+    format = DICOM
+    comment = MeVisLab
+    allowOverwrite = TRUE
+    autoFilename = FALSE
+    sourceName = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Baseline/Phase sortiert/alle/IM00008.dcm"
+    postfix = .result1
+    dicomNameUsed = TRUE
+    dicomMetaHeader = TRUE
+    dicomDerived = TRUE
+    dicomDerivedImageType = "OTHER\\MEVISLAB"
+    dicomDiscardTags = FrameSpecific
+    dicomStoreTimeInfo = None
+    dicomSetWindow = FALSE
+    dicomWindowCenter = 0
+    dicomWindowWidth = 0
+    dicomIgnoreHalfVoxelShift = FALSE
+    tiffCompression = None
+    tiffTileX = 128
+    tiffTileY = 128
+    tiffTileXAuto = TRUE
+    tiffTileYAuto = TRUE
+    tiffLinearRGB = FALSE
+    saveDicomHeaderOnly = FALSE
+    pngCompression = Default
+    pngInterlaced = FALSE
+    jpegQuality = 75
+    jpegProgressive = FALSE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "769 -115 96 72"
+    moduleGroupName = Output
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "836 485 279 290"
+        sizeHint = "248 290"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold1
+    threshold = 0
+    relativeThreshold = FALSE
+    comparisonOperator = GreaterEqual
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 17
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module View2D {
+  internal  {
+    frame = "957 -179 120 56"
+    moduleGroupName = Output
+    windows  {
+      window _default {
+        geometry = "752 70 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D4
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 17
+    lutWidth = 17
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "741 989 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1056 92 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D5
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "325 1237 120 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "1056 92 400 391"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D6
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1024
+    lutWidth = 2048
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "449 1317 96 56"
+    moduleGroupName = Input
+    windows  {
+      window _default {
+        geometry = "1374 508 396 525"
+        sizeHint = "396 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage1
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 102
+    sx = 148
+    modifyX = TRUE
+    y = 92
+    sy = 148
+    modifyY = TRUE
+    z = 0
+    sz = 0
+    modifyZ = FALSE
+    c = 0
+    sc = 0
+    modifyC = FALSE
+    t = 0
+    st = 0
+    modifyT = FALSE
+    u = 0
+    su = 0
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartEnd
+    autoApply = TRUE
+  }
+}
+connections  {
+  ScaleImage.input0 = inPhaseImage.output0
+  ScaleReference.input0 = inReferenceImage.output0
+  ComputeHeatMap.input0 = ComputeDifference.output0
+  ComputeDifference.input0 = ScaleReference.output0
+  ComputeDifference.input1 = ScaleImage.output0
+  ClampValues.input0 = AddBaseTemperature.output0
+  AddBaseTemperature.input0 = ComputeHeatMap.output0
+  inPhaseImage.input0 = ImageLoad.output0
+  inReferenceImage.input0 = Arithmetic22.output0
+  outHeatMap.input0 = ClampValues.output0
+  View2D.inImage = Arithmetic22.output0
+  View2D1.inImage = ImageLoad.output0
+  View2D2.inImage = SubImage.output0
+  DicomTagBrowser.input0 = ImageLoad.output0
+  Arithmetic2.input0 = ImageLoad1.output0
+  Arithmetic2.input1 = ImageLoad2.output0
+  Arithmetic21.input0 = Arithmetic2.output0
+  Arithmetic21.input1 = ImageLoad3.output0
+  Arithmetic22.input0 = Arithmetic21.output0
+  Arithmetic22.input1 = Threshold.output0
+  Threshold.input0 = ImageLoad3.output0
+  ImageSave.input0 = SubImage.output0
+  Round.input0 = outHeatMap.output0
+  SubImage.input0 = Round.output0
+  Info.input0 = SubImage.output0
+  Info1.input0 = ImageLoad.output0
+  View2D3.inImage = ImageLoad4.output0
+  ImageSave1.input0 = Threshold1.output0
+  Threshold1.input0 = SubImage.output0
+  View2D4.inImage = Threshold1.output0
+  View2D6.inImage = SubImage1.output0
+  SubImage1.input0 = ImageLoad1.output0
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 74
+        objectName = Thermometry
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 117
+        objectName = Output
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 142
+        objectName = Input
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+    }
+  }
+}

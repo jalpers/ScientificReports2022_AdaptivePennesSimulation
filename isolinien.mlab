@@ -1,0 +1,2416 @@
+// MDL v1 utf8
+mevislabVersion = 3.2
+network  {
+  watchlist = ""
+}
+module ImageLoad {
+  internal  {
+    frame = "257 165 128 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "536 189 385 321"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad
+    filename = C:/Users/maxro/Documents/MasterInformatik/Einzelprojekt/Phantome/PerfusionPhantom_2/HeatMap/157_5/14.IMA
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "277 -179 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "330 120 400 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "293 21 136 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "205 135 384 272"
+        sizeHint = "370 272"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module Threshold {
+  internal  {
+    frame = "253 -123 88 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "359 197 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold
+    threshold = 30
+    relativeThreshold = FALSE
+    comparisonOperator = GreaterEqual
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module View2D {
+  internal  {
+    frame = "437 -291 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "402 125 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D1
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "441 -131 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "407 188 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold1
+    threshold = 28
+    relativeThreshold = FALSE
+    comparisonOperator = GreaterEqual
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module View2D {
+  internal  {
+    frame = "-75 -99 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2692 153 725 226"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D2
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module IntervalThreshold {
+  internal  {
+    frame = "137 21 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "550 23 334 487"
+        sizeHint = "331 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IntervalThreshold
+    lowerType = UserDef
+    innerType = UserDef
+    upperType = UserDef
+    centerWidthSet = FALSE
+    threshCenter = 70
+    threshWidth = 60
+    threshMin = 40
+    threshMax = 100
+    lowerUserValue = 0
+    innerUserValue = 1
+    upperUserValue = 0
+    changeMinMax = FALSE
+    changedMin = 0
+    changedMax = 1000
+  }
+}
+module View2D {
+  internal  {
+    frame = "-435 -75 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1193 238 287 342"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D3
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 21.4603176116943
+    lutWidth = 49.523811340332
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module DirectDicomImport {
+  internal  {
+    frame = "789 165 168 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "80 153 800 279"
+        sizeHint = "800 279"
+        wasOpen = no
+      }
+      window VolumeDetails {
+        geometry = "177 116 606 353"
+        sizeHint = "606 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = DirectDicomImport
+    tagDumpSize = 10000
+    dumpPrivateTagValues = FALSE
+    numShownBinaryEntries = 8
+    annotate = FALSE
+    regExLineFilter = ""
+    fullUserSrcPaths = ""
+    fullTargetPath = ""
+    useRelativeCachePaths = FALSE
+    writeSingleVolumeCacheFiles = FALSE
+    autoCreateCachePath = FALSE
+    cacheFileName = DDICacheFile
+    consoleSizeInKiloBytes = 64
+    outVolume = 0
+    preferCacheBeforeImport = FALSE
+    clearAfterImport = FALSE
+    clearSingleFrameCacheAfterImport = TRUE
+    maxTreeCachedMBs = 1000
+    maxTagCachedMBs = 500
+    editDicomCacheSize = FALSE
+    useResultCaching = FALSE
+    suppressedFilesAndSuffixes = ".mlab .db .log .lst .xml .rar .zip .img .exe .ini .inf .jxr .ndpi .svn-base .vmu entries all-wcprops .DDI-SMF-TreeCacheFile.dcm"
+    explicitFileTypes = ".1 .2 .3 .4 .5 .6 .7 .8 .9 .bmp .btf .dm3 .dm4 .cnf .cpi .czi .dat .dzi .gipl .gsa .hdr .jp2 .jpg .jpeg .lsm .mhd .mi .mlimage .nhdr .nii .mca .mrxs .nrrd .pgm .pic .png .pnm .ppm .raw .rd .rek .spe .spr .svs .tif .tiff .txt .uxd .vms .vtk .wsv .xy"
+    inputFileList = ""
+    sortMode = NumVoxels
+    sortUpwards = TRUE
+    idxSortTagValue = ""
+    useNumericTagValueSorting = FALSE
+    thumbNailsExt = 40
+    userColumnTag0 = ""
+    userColumnTag1 = ""
+    userColumnTag2 = ""
+    iconBuildMode = UseMiddleSlice
+    icon = FALSE
+    userTag0 = FALSE
+    userTag1 = FALSE
+    userTag2 = FALSE
+    columnConfig = "# Note: Comments must always be prefixed at line start with a '#'.
+
+# Default setting:
+validImage hasIssues fileType voxelType imgExt numVoxels numSlices numTimePoints numSrcFiles modality patientID patientSex patientsName studyID
+
+#modality studyDate acquisitionTime numSlices spacingBetweenSlices studyDescription seriesDescription acquisitionDate imageComments patientsName patientSex patientsBirthDate patientID referringPhysiciansName admittingDiagnosesDescription
+
+# Available values are:
+#userTag0 userTag1 userTag2 validImage hasIssues importTime fileType voxelType imgExt voxelExtent numVoxels numSlices colorImage numTimePoints numSrcFiles firstOrigFile outFileName inputFilterLabel lossy compressionType humanReadableOrientation accessionNumber acquisitionDate acquisitionMatrix acquisitionNumber acquisitionTime aCR_NEMA_AcquisitionsInSeries aCR_NEMA_ImageOrientation aCR_NEMA_ImagePosition admittingDiagnosesDescription angioFlag bitsAllocated bitsStored bodyPartExamined codeMeaning codeValue columns contentDate contentTime contrastBolusAgent contrastBolusStartTime convolutionKernel currentPatientLocation derivationDescription echoTime echoTrainLength exposure exposureTime flipAngle frameOfReferenceUID gantryAngle gantryAngleTolerance gantryDetectorSlew gantryDetectorTilt gantryRotationDirection highBit imageComments imagedNucleus imageOrientationPatient imagePositionPatient imageType imagingFrequency instanceCreationDate instanceCreationTime instanceNumber institutionAddress institutionName inversionTime kVP largestImagePixelValue magneticFieldStrength manufacturer manufacturersModelName mediaStorageSOPInstanceUID modality mRAcquisitionType nameOfPhysiciansReadingStudy numberOfAverages numberOfFrames numberOfPhaseEncodingSteps numberOfTemporalPositions otherPatientNames patientComments patientID patientOrientation patientsAge percentSampling patientSex patientPosition patientsAddress patientsMothersBirthName patientsName patientsTelephoneNumbers patientsWeight patientsBirthDate performedProcedureStepDescription performedProcedureStepStartDate performedProcedureStepStartTime photometricInterpretation physiciansOfRecord pixelRepresentation pixelSpacing protocolName receiveCoilName reconstructionDiameter referringPhysiciansName repetitionTime requestedProcedureDescription requestingPhysician requestingService rescaleIntercept rescaleSlope rescaleType rows samplesPerPixel sAR scanningSequence scanOptions scheduledProcedureStepDescription sequenceName sequenceVariant seriesDate seriesDescription seriesInstanceUID seriesNumber seriesTime sliceLocation sliceThickness smallestImagePixelValue softwareVersions sOPClassUID sOPInstanceUID spacingBetweenSlices stationName studyDate studyDescription studyID studyInstanceUID studyTime windowCenter windowWidth xRayTubeCurrent "
+    dplCalcMinMax = Automatic
+    dplAnon = FALSE
+    dplVerbose = 0
+    specialProcessors = Off
+    minimumNumFramesInVolume = 1
+    dplConfigString0 = "*(
+  {Element = (0008,0060); Name = Modality;  Sort = 1; Part = 1; },
+  {Element = (0008,0020); Name = StudyDate; Sort = 1; Part = 1; },
+  {Element = (0008,0008); Name = ImageType; Sort = 1; Part = 1; },
+  {Element = (0018,1030); Name = ProtocolName; Sort = 1; Part = 1; },
+  {Element = (0018,0050); Name = SliceThickness; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,0080); Name = RepetitionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0082); Name = InversionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0091); Name = EchoTrainLength; Sort = 1; Part = 1; },
+  {Element = (0018,1210); Name = ConvolutionKernel; Sort = 1; Part = 1; },
+  {Element = (0018,1314); Name = FlipAngle; Sort = 1; Part = 1; },
+  {Element = (0018,0015); Name = BodyPartExamined; Sort = 1; Part = 1; },
+  {Element = (0028,0008); Name = NumberOfFrames; Sort = 1; Part = 1; },
+  {Element = (0028,0010); Name = Rows; Sort = 1; Part = 1; },
+  {Element = (0028,0011); Name = Columns; Sort = 1; Part = 1; },
+  {Element = (0020,0037); Name = ImageOrientationPatient; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,1004); Name = PlateID; Sort = 1; Part = 1; },
+  {Element = (0018,1000); Name = DeviceSerialNumber; Sort = 1; Part = 1; },
+  {Element = (0028,0004); Name = PhotometricInterpretation; Sort = 1; Part = 1; },
+  {Element = (0028,0100); Name = BitsAllocated; Sort = 1; Part = 1; },
+  {Element = (0028,0102); Name = HighBit; Sort = 1; Part = 1; },
+  {Element = (0028,0103); Name = PixelRepresentation; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0023); Name = MRAcquisitionType; Sort = 1; Part = 1; },
+  {Element = (0028,0030); Name = PixelSpacing; Sort = 1; Part = 1; Tolerance = 0.00001; },
+  {Element = (0054,0010); Name = EnergyWindowVector; Sort = 1; Part = 1; },
+  {Element = (0054,0030); Name = PhaseVector; Sort = 1; Part = 1; },
+  {Element = (0054,0060); Name = RRIntervalVector; Sort = 1; Part = 1; },
+  {Element = (0054,0050); Name = RotationVector; Sort = 1; Part = 1; },
+  {Element = (0028,1101); Name = RedPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1102); Name = GreenPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1103); Name = BluePaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1201); Name = RedPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1202); Name = GreenPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1203); Name = BluePaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')" Part = 1; PartCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')";       },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = NM & NumberOfFrames > 1";  Part = 1; PartCondition = "Modality = NM & NumberOfFrames > 1";  },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG"; Part = 1; PartCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG";  },
+  {Element = (0008,1090); Name = ManufacturerModelName; Sort = 1; Part = 1; },
+  {Element = (0008,1010); Name = StationName; Sort = 1; Part = 1; },
+  {Element = (0008,0070); Name = Manufacturer; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0085); Name = ImagedNucleus; Sort = 1; Part = 1; },
+  {Element = (0018,0087); Name = MagneticFieldStrength; Sort = 1; Part = 1; },
+  {Element = (0018,1020); Name = SoftwareVersion; Sort = 1; Part = 1; },
+  {Element = (0018,5100); Name = PatientPosition; Sort = 1; Part = 1; },
+  {Element = (0062,000b); Name = ReferencedSegmentNumber; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1;  PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1; PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,0013); Name = InstanceNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0030); Name = StudyTime; Sort = 1; Part = 0; },
+  {Element = (0020,0011); Name = SeriesNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0021); Name = SeriesDate; Sort = 1; Part = 0; },
+  {Element = (0008,0031); Name = SeriesTime; Sort = 1; Part = 0; },
+  {Element = (0018,0081); Name = EchoTime; Sort = 1; Part = 0; },
+  {Element = (0018,0024); Name = SequenceName; Sort = 1; Part = 0; },
+  {Element = (0020,0012); Name = AcquisitionNumber; Sort = 1; Part = 0; },
+  {Element = (0018,0022); Name = ScanOptions; Sort = 1; Part = 0; },
+  {Element = (0008,0022); Name = AcquisitionDate; Sort = 1; Part = 0; },
+  {Element = (0008,0032); Name = AcquisitionTime; Sort = 1; Part = 0; },
+  {Element = (0008,0023); Name = ContentDate; Sort = 1; Part = 0; },
+  {Element = (0008,0033); Name = ContentTime; Sort = 1; Part = 0; },
+  {Element = (0020,0032); Name = ImagePositionPatient; Sort = 1; Part = 0; },
+  {Element = (0054,0020); Name = DetectorVector; Sort = 1; Part = 0; },
+  {Element = (0054,0100); Name = TimeSliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0070); Name = TimeSlotVector; Sort = 1; Part = 0; },
+  {Element = (0054,0080); Name = SliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0090); Name = AngularViewVector; Sort = 1; Part = 0; },
+  {Element = (0020,9157); Name = DimensionIndexValues; Sort = 1; Part = 0; },
+)
+*"
+    dplConfigString1 = "*(
+  {Element = (0008,0060); Name = Modality;  Sort = 1; Part = 1; },
+  {Element = (0008,0020); Name = StudyDate; Sort = 1; Part = 1; },
+  {Element = (0008,0008); Name = ImageType; Sort = 1; Part = 1; },
+  {Element = (0018,1030); Name = ProtocolName; Sort = 1; Part = 1; },
+  {Element = (0018,0050); Name = SliceThickness; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,0080); Name = RepetitionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0082); Name = InversionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0091); Name = EchoTrainLength; Sort = 1; Part = 1; },
+  {Element = (0018,1210); Name = ConvolutionKernel; Sort = 1; Part = 1; },
+  {Element = (0018,1314); Name = FlipAngle; Sort = 1; Part = 1; },
+  {Element = (0018,0015); Name = BodyPartExamined; Sort = 1; Part = 1; },
+  {Element = (0028,0008); Name = NumberOfFrames; Sort = 1; Part = 1; },
+  {Element = (0028,0010); Name = Rows; Sort = 1; Part = 1; },
+  {Element = (0028,0011); Name = Columns; Sort = 1; Part = 1; },
+  {Element = (0020,0037); Name = ImageOrientationPatient; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,1004); Name = PlateID; Sort = 1; Part = 1; },
+  {Element = (0018,1000); Name = DeviceSerialNumber; Sort = 1; Part = 1; },
+  {Element = (0028,0004); Name = PhotometricInterpretation; Sort = 1; Part = 1; },
+  {Element = (0028,0100); Name = BitsAllocated; Sort = 1; Part = 1; },
+  {Element = (0028,0102); Name = HighBit; Sort = 1; Part = 1; },
+  {Element = (0028,0103); Name = PixelRepresentation; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0023); Name = MRAcquisitionType; Sort = 1; Part = 1; },
+  {Element = (0028,0030); Name = PixelSpacing; Sort = 1; Part = 1; Tolerance = 0.00001; },
+  {Element = (0054,0010); Name = EnergyWindowVector; Sort = 1; Part = 1; },
+  {Element = (0054,0030); Name = PhaseVector; Sort = 1; Part = 1; },
+  {Element = (0054,0060); Name = RRIntervalVector; Sort = 1; Part = 1; },
+  {Element = (0054,0050); Name = RotationVector; Sort = 1; Part = 1; },
+  {Element = (0028,1101); Name = RedPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1102); Name = GreenPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1103); Name = BluePaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1201); Name = RedPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1202); Name = GreenPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1203); Name = BluePaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')" Part = 1; PartCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')";       },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = NM & NumberOfFrames > 1";  Part = 1; PartCondition = "Modality = NM & NumberOfFrames > 1";  },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG"; Part = 1; PartCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG";  },
+  {Element = (0008,1090); Name = ManufacturerModelName; Sort = 1; Part = 1; },
+  {Element = (0008,1010); Name = StationName; Sort = 1; Part = 1; },
+  {Element = (0008,0070); Name = Manufacturer; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0085); Name = ImagedNucleus; Sort = 1; Part = 1; },
+  {Element = (0018,0087); Name = MagneticFieldStrength; Sort = 1; Part = 1; },
+  {Element = (0018,1020); Name = SoftwareVersion; Sort = 1; Part = 1; },
+  {Element = (0018,5100); Name = PatientPosition; Sort = 1; Part = 1; },
+  {Element = (0062,000b); Name = ReferencedSegmentNumber; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1;  PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1; PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,0013); Name = InstanceNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0030); Name = StudyTime; Sort = 1; Part = 0; },
+  {Element = (0020,0011); Name = SeriesNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0021); Name = SeriesDate; Sort = 1; Part = 0; },
+  {Element = (0008,0031); Name = SeriesTime; Sort = 1; Part = 0; },
+  {Element = (0018,0081); Name = EchoTime; Sort = 1; Part = 0; },
+  {Element = (0018,0024); Name = SequenceName; Sort = 1; Part = 0; },
+  {Element = (0020,0012); Name = AcquisitionNumber; Sort = 1; Part = 0; },
+  {Element = (0018,0022); Name = ScanOptions; Sort = 1; Part = 0; },
+  {Element = (0008,0022); Name = AcquisitionDate; Sort = 1; Part = 0; },
+  {Element = (0008,0032); Name = AcquisitionTime; Sort = 1; Part = 0; },
+  {Element = (0008,0023); Name = ContentDate; Sort = 1; Part = 0; },
+  {Element = (0008,0033); Name = ContentTime; Sort = 1; Part = 0; },
+  {Element = (0020,0032); Name = ImagePositionPatient; Sort = 1; Part = 0; },
+  {Element = (0054,0020); Name = DetectorVector; Sort = 1; Part = 0; },
+  {Element = (0054,0100); Name = TimeSliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0070); Name = TimeSlotVector; Sort = 1; Part = 0; },
+  {Element = (0054,0080); Name = SliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0090); Name = AngularViewVector; Sort = 1; Part = 0; },
+  {Element = (0020,9157); Name = DimensionIndexValues; Sort = 1; Part = 0; },
+)
+*"
+    dplConfigString2 = "*(
+  {Element = (0008,0060); Name = Modality;  Sort = 1; Part = 1; },
+  {Element = (0008,0020); Name = StudyDate; Sort = 1; Part = 1; },
+  {Element = (0008,0008); Name = ImageType; Sort = 1; Part = 1; },
+  {Element = (0018,1030); Name = ProtocolName; Sort = 1; Part = 1; },
+  {Element = (0018,0050); Name = SliceThickness; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,0080); Name = RepetitionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0082); Name = InversionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0091); Name = EchoTrainLength; Sort = 1; Part = 1; },
+  {Element = (0018,1210); Name = ConvolutionKernel; Sort = 1; Part = 1; },
+  {Element = (0018,1314); Name = FlipAngle; Sort = 1; Part = 1; },
+  {Element = (0018,0015); Name = BodyPartExamined; Sort = 1; Part = 1; },
+  {Element = (0028,0008); Name = NumberOfFrames; Sort = 1; Part = 1; },
+  {Element = (0028,0010); Name = Rows; Sort = 1; Part = 1; },
+  {Element = (0028,0011); Name = Columns; Sort = 1; Part = 1; },
+  {Element = (0020,0037); Name = ImageOrientationPatient; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,1004); Name = PlateID; Sort = 1; Part = 1; },
+  {Element = (0018,1000); Name = DeviceSerialNumber; Sort = 1; Part = 1; },
+  {Element = (0028,0004); Name = PhotometricInterpretation; Sort = 1; Part = 1; },
+  {Element = (0028,0100); Name = BitsAllocated; Sort = 1; Part = 1; },
+  {Element = (0028,0102); Name = HighBit; Sort = 1; Part = 1; },
+  {Element = (0028,0103); Name = PixelRepresentation; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0023); Name = MRAcquisitionType; Sort = 1; Part = 1; },
+  {Element = (0028,0030); Name = PixelSpacing; Sort = 1; Part = 1; Tolerance = 0.00001; },
+  {Element = (0054,0010); Name = EnergyWindowVector; Sort = 1; Part = 1; },
+  {Element = (0054,0030); Name = PhaseVector; Sort = 1; Part = 1; },
+  {Element = (0054,0060); Name = RRIntervalVector; Sort = 1; Part = 1; },
+  {Element = (0054,0050); Name = RotationVector; Sort = 1; Part = 1; },
+  {Element = (0028,1101); Name = RedPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1102); Name = GreenPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1103); Name = BluePaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1201); Name = RedPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1202); Name = GreenPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1203); Name = BluePaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')" Part = 1; PartCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')";       },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = NM & NumberOfFrames > 1";  Part = 1; PartCondition = "Modality = NM & NumberOfFrames > 1";  },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG"; Part = 1; PartCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG";  },
+  {Element = (0008,1090); Name = ManufacturerModelName; Sort = 1; Part = 1; },
+  {Element = (0008,1010); Name = StationName; Sort = 1; Part = 1; },
+  {Element = (0008,0070); Name = Manufacturer; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0085); Name = ImagedNucleus; Sort = 1; Part = 1; },
+  {Element = (0018,0087); Name = MagneticFieldStrength; Sort = 1; Part = 1; },
+  {Element = (0018,1020); Name = SoftwareVersion; Sort = 1; Part = 1; },
+  {Element = (0018,5100); Name = PatientPosition; Sort = 1; Part = 1; },
+  {Element = (0062,000b); Name = ReferencedSegmentNumber; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1;  PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1; PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,0013); Name = InstanceNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0030); Name = StudyTime; Sort = 1; Part = 0; },
+  {Element = (0020,0011); Name = SeriesNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0021); Name = SeriesDate; Sort = 1; Part = 0; },
+  {Element = (0008,0031); Name = SeriesTime; Sort = 1; Part = 0; },
+  {Element = (0018,0081); Name = EchoTime; Sort = 1; Part = 0; },
+  {Element = (0018,0024); Name = SequenceName; Sort = 1; Part = 0; },
+  {Element = (0020,0012); Name = AcquisitionNumber; Sort = 1; Part = 0; },
+  {Element = (0018,0022); Name = ScanOptions; Sort = 1; Part = 0; },
+  {Element = (0008,0022); Name = AcquisitionDate; Sort = 1; Part = 0; },
+  {Element = (0008,0032); Name = AcquisitionTime; Sort = 1; Part = 0; },
+  {Element = (0008,0023); Name = ContentDate; Sort = 1; Part = 0; },
+  {Element = (0008,0033); Name = ContentTime; Sort = 1; Part = 0; },
+  {Element = (0020,0032); Name = ImagePositionPatient; Sort = 1; Part = 0; },
+  {Element = (0054,0020); Name = DetectorVector; Sort = 1; Part = 0; },
+  {Element = (0054,0100); Name = TimeSliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0070); Name = TimeSlotVector; Sort = 1; Part = 0; },
+  {Element = (0054,0080); Name = SliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0090); Name = AngularViewVector; Sort = 1; Part = 0; },
+  {Element = (0020,9157); Name = DimensionIndexValues; Sort = 1; Part = 0; },
+)
+*"
+    dplConfigString3 = "*(
+  {Element = (0008,0060); Name = Modality;  Sort = 1; Part = 1; },
+  {Element = (0008,0020); Name = StudyDate; Sort = 1; Part = 1; },
+  {Element = (0008,0008); Name = ImageType; Sort = 1; Part = 1; },
+  {Element = (0018,1030); Name = ProtocolName; Sort = 1; Part = 1; },
+  {Element = (0018,0050); Name = SliceThickness; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,0080); Name = RepetitionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0082); Name = InversionTime; Sort = 1; Part = 1; },
+  {Element = (0018,0091); Name = EchoTrainLength; Sort = 1; Part = 1; },
+  {Element = (0018,1210); Name = ConvolutionKernel; Sort = 1; Part = 1; },
+  {Element = (0018,1314); Name = FlipAngle; Sort = 1; Part = 1; },
+  {Element = (0018,0015); Name = BodyPartExamined; Sort = 1; Part = 1; },
+  {Element = (0028,0008); Name = NumberOfFrames; Sort = 1; Part = 1; },
+  {Element = (0028,0010); Name = Rows; Sort = 1; Part = 1; },
+  {Element = (0028,0011); Name = Columns; Sort = 1; Part = 1; },
+  {Element = (0020,0037); Name = ImageOrientationPatient; Sort = 1; Part = 1; Tolerance = 0.000005; },
+  {Element = (0018,1004); Name = PlateID; Sort = 1; Part = 1; },
+  {Element = (0018,1000); Name = DeviceSerialNumber; Sort = 1; Part = 1; },
+  {Element = (0028,0004); Name = PhotometricInterpretation; Sort = 1; Part = 1; },
+  {Element = (0028,0100); Name = BitsAllocated; Sort = 1; Part = 1; },
+  {Element = (0028,0102); Name = HighBit; Sort = 1; Part = 1; },
+  {Element = (0028,0103); Name = PixelRepresentation; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0023); Name = MRAcquisitionType; Sort = 1; Part = 1; },
+  {Element = (0028,0030); Name = PixelSpacing; Sort = 1; Part = 1; Tolerance = 0.00001; },
+  {Element = (0054,0010); Name = EnergyWindowVector; Sort = 1; Part = 1; },
+  {Element = (0054,0030); Name = PhaseVector; Sort = 1; Part = 1; },
+  {Element = (0054,0060); Name = RRIntervalVector; Sort = 1; Part = 1; },
+  {Element = (0054,0050); Name = RotationVector; Sort = 1; Part = 1; },
+  {Element = (0028,1101); Name = RedPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1102); Name = GreenPaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1103); Name = BluePaletteColorLookupTableDescriptor; Sort = 1; Part = 1; },
+  {Element = (0028,1201); Name = RedPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1202); Name = GreenPaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0028,1203); Name = BluePaletteColorLookupTableData; Sort = 1; Part = 1; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')" Part = 1; PartCondition = "Modality = NM & !(FrameIncrementPointer = '(0054,0010)')";       },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = NM & NumberOfFrames > 1";  Part = 1; PartCondition = "Modality = NM & NumberOfFrames > 1";  },
+  {Element = (0008,0018); Name = SOPInstanceUID; Sort = 1; SortCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG"; Part = 1; PartCondition = "Modality = CR | Modality = DR | Modality = MG | Modality = MX | Modality = RG";  },
+  {Element = (0008,1090); Name = ManufacturerModelName; Sort = 1; Part = 1; },
+  {Element = (0008,1010); Name = StationName; Sort = 1; Part = 1; },
+  {Element = (0008,0070); Name = Manufacturer; Sort = 1; Part = 1; },
+  {Element = (0018,0020); Name = ScanningSequence; Sort = 1; Part = 1; },
+  {Element = (0018,0085); Name = ImagedNucleus; Sort = 1; Part = 1; },
+  {Element = (0018,0087); Name = MagneticFieldStrength; Sort = 1; Part = 1; },
+  {Element = (0018,1020); Name = SoftwareVersion; Sort = 1; Part = 1; },
+  {Element = (0018,5100); Name = PatientPosition; Sort = 1; Part = 1; },
+  {Element = (0062,000b); Name = ReferencedSegmentNumber; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1;  PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,000e); Name = SeriesInstanceUID; Sort = 1; SortCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; Part = 1; PartCondition = "SOPClassUID = 1.2.840.10008.5.1.4.1.1.66.4"; },
+  {Element = (0020,0013); Name = InstanceNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0030); Name = StudyTime; Sort = 1; Part = 0; },
+  {Element = (0020,0011); Name = SeriesNumber; Sort = 1; Part = 0; },
+  {Element = (0008,0021); Name = SeriesDate; Sort = 1; Part = 0; },
+  {Element = (0008,0031); Name = SeriesTime; Sort = 1; Part = 0; },
+  {Element = (0018,0081); Name = EchoTime; Sort = 1; Part = 0; },
+  {Element = (0018,0024); Name = SequenceName; Sort = 1; Part = 0; },
+  {Element = (0020,0012); Name = AcquisitionNumber; Sort = 1; Part = 0; },
+  {Element = (0018,0022); Name = ScanOptions; Sort = 1; Part = 0; },
+  {Element = (0008,0022); Name = AcquisitionDate; Sort = 1; Part = 0; },
+  {Element = (0008,0032); Name = AcquisitionTime; Sort = 1; Part = 0; },
+  {Element = (0008,0023); Name = ContentDate; Sort = 1; Part = 0; },
+  {Element = (0008,0033); Name = ContentTime; Sort = 1; Part = 0; },
+  {Element = (0020,0032); Name = ImagePositionPatient; Sort = 1; Part = 0; },
+  {Element = (0054,0020); Name = DetectorVector; Sort = 1; Part = 0; },
+  {Element = (0054,0100); Name = TimeSliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0070); Name = TimeSlotVector; Sort = 1; Part = 0; },
+  {Element = (0054,0080); Name = SliceVector; Sort = 1; Part = 0; },
+  {Element = (0054,0090); Name = AngularViewVector; Sort = 1; Part = 0; },
+  {Element = (0020,9157); Name = DimensionIndexValues; Sort = 1; Part = 0; },
+)
+*"
+    dplUsedConfig = DefaultConfig
+    relativeDistanceTolerance = 0.25
+    absoluteDistanceTolerance = 0.02
+    positionToleranceMM = 0.0999
+    seriesBasedPreprocessingCondition = FALSE
+    force2DPlusTCondition = "Modality == XA | Modality == US | Modality == RF"
+    logPartingAndSortingInformation = FALSE
+    dplScanRecursively = TRUE
+    decomposeMultiFrameFiles = TRUE
+    copyFullFunctionalGroupSequences = TRUE
+    removePrivateMFSQTag = FALSE
+    forceOrthogonalWorldMatrix = FALSE
+    decomposeTo3DVolumes = FALSE
+    allowMixedPixelTypes = FALSE
+    copyPrivateTopLevelSourceTags = TRUE
+    dplHardOverwriteTagOn0 = FALSE
+    dplHardOverwriteTagId0 = ""
+    dplHardOverwriteTagStr0 = ""
+    dplHardOverwriteTagOn1 = FALSE
+    dplHardOverwriteTagId1 = ""
+    dplHardOverwriteTagStr1 = ""
+    dplHardOverwriteTagOn2 = FALSE
+    dplHardOverwriteTagId2 = ""
+    dplHardOverwriteTagStr2 = ""
+    dplHardOverwriteTagOn3 = FALSE
+    dplHardOverwriteTagId3 = ""
+    dplHardOverwriteTagStr3 = ""
+    dplAllowSortingAccordingToDimensionIndexValues = Auto
+    dplWorkaroundValueForImageOrientationPatientTag = ""
+    composeOtherFilesMode = Single
+    silentTrialFileTypes = ".dat .raw .txt"
+    source = $(HOME)/Documents/MasterInformatik/Einzelprojekt/Phantome/Phantom_2/HeatMap/output
+    guiCachePath = ""
+  }
+}
+module View3D {
+  internal  {
+    frame = "825 -99 144 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "32 23 928 547"
+        sizeHint = "928 547"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View3D
+    autoViewAll = TRUE
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    lutType = Ramp
+    rendererType = Slicer
+    currentTimePoint = 0
+    staticSamplingRate = 1
+    quality = 1
+    filterVolumeData = FilterLinear
+    lutEditorColorPoints = "[ 0 0 0 0, 4095 1 1 1 ]"
+    lutEditorAlphaPoints = "[ 0 0, 4095 1 ]"
+    lutEditorRelativeLut = FALSE
+    lutEditorColorInterpolation = InterpolateRGB
+    lutEditorAlphaFactor = 1
+    orientationProjectionType = PERSPECTIVE
+    orientationLocation = LOWER_RIGHT
+    orientationOn = TRUE
+    orientationModel = CUBE
+    greyCenter = 0.569999575614929
+    greyWidth = 0.950000047683716
+    alphaFactor = 1
+    colorFactor = "1 1 1"
+    camType = TRUE
+    camPosition = "79.7091979980469 39.9843444824219 -42.9256362915039"
+    camOrientation = "-0.0681482180953026 -0.989725172519684 0.125698000192642 4.24578905105591"
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    camFar = 162.80275
+    camNear = 13.613524
+    camFocal = 89.999817
+    camHeight = 0.78539801
+    decoration = FALSE
+    annotations = TRUE
+    background = TRUE
+    mode = VolumeRendering
+    interactiveQuality = Medium
+  }
+  internalFields  {
+    renderer.gradientQuality = GradientQualityAutomatic
+    renderer.enhancementAlphaMix = 0.25
+    renderer.boundaryEnhancement = FALSE
+    renderer.boundaryEnhancementFactor = 1
+    renderer.boundaryEnhancementExponent = 1
+    renderer.boundaryEnhancementGradientBias = 0
+    renderer.silhouetteEnhancement = FALSE
+    renderer.silhouetteEnhancementExponent = 1
+    renderer.silhouetteEnhancementFactor = 1
+    renderer.toneShading = FALSE
+    renderer.toneShadingWarmColor = "0.67451000213623 0.533333003520966 0.141176000237465"
+    renderer.toneShadingColdColor = "0 0 0.400000005960464"
+    renderer.toneShadingWarmDiffuse = 0.60000002
+    renderer.toneShadingColdDiffuse = 0.2
+    renderer.toneShadingAngle = 45
+    renderer.materialAmbient = 0.60000002
+    renderer.materialDiffuse = 1
+    renderer.materialSpecular = 1
+    renderer.materialSpecularity = 32
+    renderer.light1Enabled = TRUE
+    renderer.light1DiffuseIntensity = 1
+    renderer.light1SpecularIntensity = 1
+    renderer.light1Color = "1 1 1"
+    renderer.light1PolarPhi = 45
+    renderer.light1PolarRho = 0
+    renderer.light2Enabled = FALSE
+    renderer.light2DiffuseIntensity = 1
+    renderer.light2SpecularIntensity = 1
+    renderer.light2Color = "1 1 1"
+    renderer.light2PolarPhi = 0
+    renderer.light2PolarRho = 0
+    renderer.light3Enabled = FALSE
+    renderer.light3DiffuseIntensity = 1
+    renderer.light3SpecularIntensity = 1
+    renderer.light3Color = "1 1 1"
+    renderer.light3PolarPhi = -45
+    renderer.light3PolarRho = 0
+    renderer.sizeOutputX = 60
+    renderer.sizeOutputY = 66
+    renderer.sizeOutputZ = 60
+    renderer.subVolumeStartX = 0
+    renderer.subVolumeStartY = 0
+    renderer.subVolumeStartZ = 0
+    renderer.subVolumeEndX = 60
+    renderer.subVolumeEndY = 66
+    renderer.subVolumeEndZ = 60
+    clip.hideGeometry = FALSE
+    clip.on = FALSE
+    clip.left = FALSE
+    clip.right = FALSE
+    clip.top = FALSE
+    clip.bottom = FALSE
+    clip.rear = FALSE
+    clip.front = FALSE
+    clip.translation0 = "1 0 0"
+    clip.translation1 = "-1 0 0"
+    clip.translation2 = "0 1 0"
+    clip.translation3 = "0 -1 0"
+    clip.translation4 = "0 0 1"
+    clip.translation5 = "0 0 -1"
+    clip.rotation0 = "0 0 0.999999940395355 1.57079994678497"
+    clip.rotation1 = "0 0 -0.999999940395355 1.57079994678497"
+    clip.rotation2 = "0 0 -1 3.1415901184082"
+    clip.rotation3 = "0 0 1 0"
+    clip.rotation4 = "-0.999999940395355 0 0 1.57079994678497"
+    clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
+  }
+}
+module Threshold {
+  internal  {
+    frame = "929 53 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "409 68 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold2
+    threshold = 29
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "573 141 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "346 112 268 360"
+        sizeHint = "268 360"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = itkImageFileReader
+    fileDataType = int16
+    autoDetermineDataType = FALSE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = " Could not create IO object for file C:/Users/Maximilian Roetzer/Documents/MasterInformatik/Einzelprojekt/Phantome/Phantom_2/GroundTruth/Necrosis.nii.gz
+The file doesn't exist. 
+Filename = C:/Users/Maximilian Roetzer/Documents/MasterInformatik/Einzelprojekt/Phantome/Phantom_2/GroundTruth/Necrosis.nii.gz
+ Loaded data may be undefined."
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    suppressErrorPosting = FALSE
+    unresolvedFileName = $(HOME)/Documents/MasterInformatik/Einzelprojekt/Phantome/Phantom_2/GroundTruth/Necrosis.nii.gz
+  }
+}
+module View3D {
+  internal  {
+    frame = "561 21 144 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "-101 23 929 547"
+        sizeHint = "928 547"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View3D1
+    autoViewAll = TRUE
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    lutType = Ramp
+    rendererType = Slicer
+    currentTimePoint = 0
+    staticSamplingRate = 1
+    quality = 1
+    filterVolumeData = FilterLinear
+    lutEditorColorPoints = "[ 0 0 0 0, 4095 1 1 1 ]"
+    lutEditorAlphaPoints = "[ 0 0, 4095 1 ]"
+    lutEditorRelativeLut = FALSE
+    lutEditorColorInterpolation = InterpolateRGB
+    lutEditorAlphaFactor = 1
+    orientationProjectionType = PERSPECTIVE
+    orientationLocation = LOWER_RIGHT
+    orientationOn = TRUE
+    orientationModel = CUBE
+    greyCenter = 0.809999883174896
+    greyWidth = 0.554999947547913
+    alphaFactor = 1
+    colorFactor = "1 1 1"
+    camType = TRUE
+    camPosition = "68.9912185668945 -7.59649848937988 171.809310913086"
+    camOrientation = "-0.233477145433426 0.0448474809527397 -0.971327602863312 3.28854274749756"
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    camFar = 369.90775
+    camNear = 13.744779
+    camFocal = 200.41431
+    camHeight = 0.78539801
+    decoration = FALSE
+    annotations = TRUE
+    background = TRUE
+    mode = VolumeRendering
+    interactiveQuality = Medium
+  }
+  internalFields  {
+    renderer.gradientQuality = GradientQualityAutomatic
+    renderer.enhancementAlphaMix = 0.25
+    renderer.boundaryEnhancement = FALSE
+    renderer.boundaryEnhancementFactor = 1
+    renderer.boundaryEnhancementExponent = 1
+    renderer.boundaryEnhancementGradientBias = 0
+    renderer.silhouetteEnhancement = FALSE
+    renderer.silhouetteEnhancementExponent = 1
+    renderer.silhouetteEnhancementFactor = 1
+    renderer.toneShading = FALSE
+    renderer.toneShadingWarmColor = "0.67451000213623 0.533333003520966 0.141176000237465"
+    renderer.toneShadingColdColor = "0 0 0.400000005960464"
+    renderer.toneShadingWarmDiffuse = 0.60000002
+    renderer.toneShadingColdDiffuse = 0.2
+    renderer.toneShadingAngle = 45
+    renderer.materialAmbient = 0.60000002
+    renderer.materialDiffuse = 1
+    renderer.materialSpecular = 1
+    renderer.materialSpecularity = 32
+    renderer.light1Enabled = TRUE
+    renderer.light1DiffuseIntensity = 1
+    renderer.light1SpecularIntensity = 1
+    renderer.light1Color = "1 1 1"
+    renderer.light1PolarPhi = 45
+    renderer.light1PolarRho = 0
+    renderer.light2Enabled = FALSE
+    renderer.light2DiffuseIntensity = 1
+    renderer.light2SpecularIntensity = 1
+    renderer.light2Color = "1 1 1"
+    renderer.light2PolarPhi = 0
+    renderer.light2PolarRho = 0
+    renderer.light3Enabled = FALSE
+    renderer.light3DiffuseIntensity = 1
+    renderer.light3SpecularIntensity = 1
+    renderer.light3Color = "1 1 1"
+    renderer.light3PolarPhi = -45
+    renderer.light3PolarRho = 0
+    renderer.sizeOutputX = 256
+    renderer.sizeOutputY = 256
+    renderer.sizeOutputZ = 100
+    renderer.subVolumeStartX = 0
+    renderer.subVolumeStartY = 0
+    renderer.subVolumeStartZ = 0
+    renderer.subVolumeEndX = 256
+    renderer.subVolumeEndY = 256
+    renderer.subVolumeEndZ = 100
+    clip.hideGeometry = FALSE
+    clip.on = FALSE
+    clip.left = FALSE
+    clip.right = FALSE
+    clip.top = FALSE
+    clip.bottom = FALSE
+    clip.rear = FALSE
+    clip.front = FALSE
+    clip.translation0 = "1 0 0"
+    clip.translation1 = "-1 0 0"
+    clip.translation2 = "0 1 0"
+    clip.translation3 = "0 -1 0"
+    clip.translation4 = "0 0 1"
+    clip.translation5 = "0 0 -1"
+    clip.rotation0 = "0 0 0.999999940395355 1.57079994678497"
+    clip.rotation1 = "0 0 -0.999999940395355 1.57079994678497"
+    clip.rotation2 = "0 0 -1 3.1415901184082"
+    clip.rotation3 = "0 0 1 0"
+    clip.rotation4 = "-0.999999940395355 0 0 1.57079994678497"
+    clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
+  }
+}
+module ComputeConnectedComponents {
+  internal  {
+    frame = "-15 -163 240 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "332 156 331 272"
+        sizeHint = "296 272"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComputeConnectedComponents
+    updateMode = AutoClear
+    neighborhoodRelation = NBH_2D_8_XY
+    backgroundValue = 0
+    useBackgroundValue = TRUE
+    useMask = FALSE
+    clusterMode = IdenticalIntensities
+    userDataDefault = ImageValue
+    similarityToleranceIntensities = 0
+    similarityToleranceVectors = 0.98
+  }
+}
+module ConnectedComponentsToImage {
+  internal  {
+    frame = "-15 -291 240 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = ConnectedComponentsToImage
+    updateMode = AutoClear
+    writeToImageMode = Rank
+    clusterValue = 1
+    backgroundValue = 0
+    useBoundingBoxOfSelectedClusters = FALSE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "-167 -387 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "382 163 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold3
+    threshold = 0
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module AddImagesExample {
+  internal  {
+    frame = "-95 -19 144 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "397 277 166 30"
+        sizeHint = "166 30"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AddImagesExample
+    offsetVoxelValue = 0
+  }
+}
+module IntervalThreshold {
+  internal  {
+    frame = "37 37 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "190 158 334 497"
+        sizeHint = "331 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IntervalThreshold1
+    lowerType = UserDef
+    innerType = UserDef
+    upperType = UserDef
+    centerWidthSet = FALSE
+    threshCenter = 7.85
+    threshWidth = 15.7
+    threshMin = 0
+    threshMax = 15.7
+    lowerUserValue = 0
+    innerUserValue = 1
+    upperUserValue = 0
+    changeMinMax = FALSE
+    changedMin = 0
+    changedMax = 1000
+  }
+}
+module View2D {
+  internal  {
+    frame = "-299 -163 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1150 128 401 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D4
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 0.220105811953545
+    lutWidth = 25.024341583252
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module AbsoluteDifference {
+  internal  {
+    frame = "-107 189 136 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "425 266 111 52"
+        sizeHint = "111 52"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AbsoluteDifference
+  }
+}
+module Threshold {
+  internal  {
+    frame = "-95 357 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "28 239 279 290"
+        sizeHint = "248 290"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold4
+    threshold = 0
+    relativeThreshold = FALSE
+    comparisonOperator = GreaterEqual
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 35
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module View2D {
+  internal  {
+    frame = "197 109 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "291 92 401 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D5
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "493 269 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "507 319 400 401"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D6
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 100
+    lutWidth = 100
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "337 309 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "689 145 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold6
+    threshold = 28
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = ImgMin
+    userConditionTrueValue = 30
+    conditionFalseWriteValue = ImgMax
+    userConditionFalseValue = 0
+  }
+}
+module cvMedian {
+  internal  {
+    frame = "-299 61 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "315 231 331 123"
+        sizeHint = "331 123"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = cvMedian
+    kernelSize = 3
+  }
+}
+module WorldVoxelConvert {
+  internal  {
+    frame = "-323 437 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "609 173 339 202"
+        sizeHint = "339 202"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WorldVoxelConvert
+    voxelX = 25
+    voxelY = 1
+    voxelZ = 0
+    worldX = 25.5
+    worldY = 1.5
+    worldZ = 0.5
+    voxelPos = "25 1 0"
+    worldPos = "25.5 1.5 0.5"
+    voxelMode = TRUE
+    worldMode = FALSE
+    intVoxelCoords = TRUE
+    keepConstant = Voxel
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "-531 461 136 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "3236 31 512 461"
+        sizeHint = "385 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad2
+    filename = C:/Users/maxro/Documents/MasterInformatik/Einzelprojekt/Phantome/Phantom_2/HeatMap/157_5/13.IMA
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "785 -3 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "295 156 384 272"
+        sizeHint = "370 272"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan1
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module OrthoView2D {
+  internal  {
+    frame = "981 -99 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "280 78 400 428"
+        sizeHint = "400 428"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = OrthoView2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    synchronizePosition = TRUE
+    layout = LAYOUT_CUBE_EQUAL
+    filterMode = FILTER_LINEAR
+    synchronizeZoom = TRUE
+    synchronizePanning = FALSE
+    useGlobalInputImage = TRUE
+    snapToCenter = FALSE
+    alternCubeLayout = FALSE
+    timePoint = 0
+    useManagedInteraction = FALSE
+    enableSlicing = TRUE
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    grayWidth = 1
+    grayCenter = 1
+    annotationOn = TRUE
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationFontSize = ANNO_SIZE_AUTO
+    valueHighPrecision = TRUE
+    annoCoords = Voxel
+    showCurrentPos = TRUE
+    worldPosition = "-6.26345062255859 99.5236511230469 3.72579956054688"
+    coloredMode = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-707 -123 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "432 48 401 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D9
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 66.0317459106445
+    lutWidth = 66.0317459106445
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module CalculateGradient {
+  internal  {
+    frame = "-623 -19 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "622 159 282 372"
+        sizeHint = "221 372"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = CalculateGradient
+    x_Derivative = FALSE
+    y_Derivative = TRUE
+    z_Derivative = FALSE
+    c_Derivative = FALSE
+    t_Derivative = FALSE
+    u_Derivative = FALSE
+    c_VoxelSize = 1
+    t_VoxelSize = 1
+    u_VoxelSize = 1
+    gradientMode = Norm
+    gradientType = Inferior
+    edgeMode = Const
+    stepWidth = 1
+    enhanceMode = None
+    estRadius = 0
+    enhanceFactor = 0
+    enhanceWidth = 0
+    status = ""
+  }
+}
+module View2D {
+  internal  {
+    frame = "445 525 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "617 543 403 393"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D10
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 30.6666660308838
+    lutWidth = 109.999984741211
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-411 285 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "308 125 401 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D7
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 1
+    lutWidth = 1
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "-231 413 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "377 162 229 260"
+        sizeHint = "206 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold5
+    threshold = 30
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module CalculateGradient {
+  internal  {
+    frame = "261 581 136 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = CalculateGradient1
+    x_Derivative = TRUE
+    y_Derivative = TRUE
+    z_Derivative = FALSE
+    c_Derivative = FALSE
+    t_Derivative = FALSE
+    u_Derivative = FALSE
+    c_VoxelSize = 1
+    t_VoxelSize = 1
+    u_VoxelSize = 1
+    gradientMode = Max
+    gradientType = Central
+    edgeMode = Const
+    stepWidth = 1
+    enhanceMode = None
+    estRadius = 0
+    enhanceFactor = 0
+    enhanceWidth = 0
+    status = ""
+  }
+}
+module View2D {
+  internal  {
+    frame = "-379 565 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "145 98 484 393"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D8
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 28.8418388366699
+    lutWidth = 84.6938781738281
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module CalculateGradient {
+  internal  {
+    frame = "-275 -35 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "926 488 321 416"
+        sizeHint = "277 416"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = CalculateGradient2
+    x_Derivative = FALSE
+    y_Derivative = TRUE
+    z_Derivative = FALSE
+    c_Derivative = FALSE
+    t_Derivative = FALSE
+    u_Derivative = FALSE
+    c_VoxelSize = 1
+    t_VoxelSize = 1
+    u_VoxelSize = 1
+    gradientMode = Max
+    gradientType = Inferior
+    edgeMode = Const
+    stepWidth = 1
+    enhanceMode = None
+    estRadius = 0
+    enhanceFactor = 0
+    enhanceWidth = 0
+    status = ""
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "-447 -219 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Arithmetic2
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-459 -403 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "198 501 401 392"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D11
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 42.429630279541
+    lutWidth = 115.555557250977
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Threshold {
+  internal  {
+    frame = "-471 -299 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "836 485 279 290"
+        sizeHint = "248 290"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold7
+    threshold = 13
+    relativeThreshold = FALSE
+    comparisonOperator = Less
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "-71 693 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "735 478 468 305"
+        sizeHint = "450 305"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan2
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module Bypass {
+  internal  {
+    frame = "165 885 104 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "910 620 120 20"
+        sizeHint = "100 20"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Bypass
+    noBypass = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "37 949 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1058 318 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad1
+    filename = C:/2.5D_Thermometry_Study/PerfusionPhantom_3/HeatMap/157_5/0.IMA
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "149 1093 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1340 611 474 353"
+        sizeHint = "474 353"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad3
+    filename = "C:/Users/Maximilian Roetzer/Downloads/2022-03-26_Leber_10min/Ablation/HeatMap/157_5/10.dcm"
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageMirror {
+  internal  {
+    frame = "-167 621 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "941 484 310 128"
+        sizeHint = "289 115"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageMirror
+    plane = "17 0 0 0"
+    fillValue = 0
+    autoApply = TRUE
+    autoUpdate = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-27 837 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "896 674 484 393"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D12
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 28.5
+    lutWidth = 98.5
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module ImageCumulativeSum {
+  internal  {
+    frame = "-187 1013 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "668 847 194 157"
+        sizeHint = "194 157"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageCumulativeSum
+    dimension = x
+    negativeDirection = FALSE
+    autoUpdate = TRUE
+  }
+}
+module AccumulateImage {
+  internal  {
+    frame = "-495 1077 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "814 559 293 143"
+        sizeHint = "293 143"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AccumulateImage
+    accumulationMode = Maximum
+    interpolation = Trilinear
+    borderHandling = UseFillValue
+  }
+}
+module itkSumProjectionImageFilter {
+  internal  {
+    frame = "-219 845 184 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "831 479 259 302"
+        sizeHint = "258 302"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = itkSumProjectionImageFilter
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    minValue = 0
+    maxValue = 100
+    applyMinMax = FALSE
+    autoSetMinMax = TRUE
+    clampOutImageValues = FALSE
+    lowerOutSideMode = MinValue
+    upperOutSideMode = MaxValue
+    lowerOutSideValue = 0
+    upperOutSideValue = 0
+    projectionDimension = 0
+    coordinateTolerance = 1e-06
+    directionTolerance = 1e-06
+  }
+}
+module itkGetAverageSliceImageFilter {
+  internal  {
+    frame = "293 941 200 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "831 438 258 384"
+        sizeHint = "258 384"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = itkGetAverageSliceImageFilter
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    minValue = 0
+    maxValue = 100
+    applyMinMax = FALSE
+    autoSetMinMax = TRUE
+    clampOutImageValues = FALSE
+    lowerOutSideMode = MinValue
+    upperOutSideMode = MaxValue
+    lowerOutSideValue = 0
+    upperOutSideValue = 0
+    averagedOutDimension = 0
+    accumulateDimension = 0
+    average = TRUE
+    coordinateTolerance = 1e-06
+    directionTolerance = 1e-06
+  }
+}
+module View2D {
+  internal  {
+    frame = "333 821 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "345 224 484 393"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D13
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 0
+    lutWidth = 100
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+connections  {
+  View2D.inImage = Threshold.output0
+  MinMaxScan.input0 = IntervalThreshold.output0
+  Threshold.input0 = MinMaxScan.output0
+  View2D1.inImage = Threshold1.output0
+  Threshold1.input0 = MinMaxScan.output0
+  View2D2.inImage = AddImagesExample.output0
+  View2D3.inImage = cvMedian.output0
+  View3D.inImage = MinMaxScan1.output0
+  Threshold2.input0 = DirectDicomImport.output0
+  View3D1.inImage = itkImageFileReader.output0
+  ComputeConnectedComponents.input0 = IntervalThreshold.output0
+  ConnectedComponentsToImage.inClusters = ComputeConnectedComponents.outClusters
+  Threshold3.input0 = ConnectedComponentsToImage.output0
+  AddImagesExample.input0 = IntervalThreshold1.output0
+  AddImagesExample.input1 = IntervalThreshold.output0
+  IntervalThreshold1.input0 = Bypass.output0
+  View2D4.inImage = CalculateGradient2.output0
+  AbsoluteDifference.input0 = Threshold4.output0
+  AbsoluteDifference.input1 = Bypass.output0
+  Threshold4.input0 = Bypass.output0
+  View2D6.inImage = Threshold6.output0
+  Threshold6.input0 = Bypass.output0
+  cvMedian.input0 = AbsoluteDifference.output0
+  MinMaxScan1.input0 = DirectDicomImport.output0
+  OrthoView2D.image = MinMaxScan1.output0
+  View2D9.inImage = CalculateGradient.output0
+  CalculateGradient.input0 = cvMedian.output0
+  View2D10.inImage = CalculateGradient1.output0
+  View2D7.inImage = Threshold5.output0
+  Threshold5.input0 = Bypass.output0
+  CalculateGradient1.input0 = Bypass.output0
+  View2D8.inImage = ImageMirror.output0
+  CalculateGradient2.input0 = cvMedian.output0
+  Arithmetic2.input0 = cvMedian.output0
+  Arithmetic2.input1 = CalculateGradient2.output0
+  View2D11.inImage = Arithmetic2.output0
+  Threshold7.input0 = Arithmetic2.output0
+  MinMaxScan2.input0 = Bypass.output0
+  Bypass.input0 = ImageLoad3.output0
+  ImageMirror.input0 = MinMaxScan2.output0
+  View2D12.inImage = Bypass.output0
+  ImageCumulativeSum.input0 = Bypass.output0
+  itkSumProjectionImageFilter.input0 = Bypass.output0
+  itkGetAverageSliceImageFilter.input0 = Bypass.output0
+  View2D13.inImage = itkGetAverageSliceImageFilter.output0
+}
+networkModel = ""
